@@ -102,8 +102,8 @@ h1 {
 
 @media screen and (max-width: 600px) {
   .polarization-chart {
-    width: 260px;
-    height: 260px;
+    width: 290px;
+    height: 290px;
   }
   
   .center-circle {
@@ -113,10 +113,13 @@ h1 {
       font-size: 18px;
   }
   .line span {
-      font-size: 6px;
+      font-size: 7px;
+      top: -5px; /* 라벨을 선 위로 조정 */
+      right: -60px; 
   }
   .line-bold span {
-    font-size: 8px;
+    top: -11px; /* 라벨을 선 위로 조정 */
+    right: -88px; 
 }
 }
 
