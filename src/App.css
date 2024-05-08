@@ -1,38 +1,146 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+  margin: 2% 10%;
+  background-color: #f3f3f3;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.wrap {
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.polarization-chart {
+  position: relative;
+  width: 520px;
+  height: 520px;
+}
+
+.center-circle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+
+.lines {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.line {
+  width: 45%;
+  height: 1px;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: left;
+  cursor: pointer;
+  transition: all .4s;
+  opacity: 0;
+}
+
+.line-bold {
+  width: 45%;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: left;
+  cursor: pointer;
+  transition: all .4s;
+  height: 4px;
+}
+
+.line:hover {
+  background-color: rgb(51, 166, 255);
+  color: rgb(51, 166, 255);
+}
+.line-bold:hover {
+  background-color: rgb(51, 166, 255);
+  color: rgb(51, 166, 255);
+}
+
+.line span {
+  /* padding: auto 60px; */
+  text-align: center;
+  width: 100px;
+  position: absolute;
+  top: -10px; /* 라벨을 선 위로 조정 */
+  right: -76px; 
+}
+
+.line-bold span {
+  text-align: center;
+  width: 100px;
+  position: absolute;
+  top: -10px; /* 라벨을 선 위로 조정 */
+  right: -76px; 
+  font-size: large;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+  .polarization-chart {
+    width: 260px;
+    height: 260px;
+  }
+  
+  .center-circle {
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      font-size: 18px;
+  }
+  .line span {
+      font-size: 11px;
+  }
+}
+
+/* button */
+.btn{
+  padding: 13px 20px;
+  border: none;
+  background-image: linear-gradient(45deg, #6a11cb, #2575fc);
   color: white;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  transition: all 0.3s ease;
+  height: fit-content;
+  margin-top: 70px;
 }
 
-.App-link {
-  color: #61dafb;
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
