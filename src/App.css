@@ -113,8 +113,11 @@ h1 {
       font-size: 18px;
   }
   .line span {
-      font-size: 11px;
+      font-size: 6px;
   }
+  .line-bold span {
+    font-size: 8px;
+}
 }
 
 /* button */
