@@ -1,0 +1,31 @@
+.modal_bg {
+    background: rgba(0, 0, 0, 0.504);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    transition: all .4s;
+}
+.modal_wrap {
+    width: 30%; height: 30%; 
+    min-width: 180px; min-height: 240px; 
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    background: rgba(255, 255, 255, 0.948);
+    border-radius: 2px; box-shadow: 2px 2px 4px 1px rgba(68, 68, 68, 0.378);
+}
+
+.modal_contnet {
+    font-size: 19px; 
+    font-weight: 700; 
+    width: fit-content; 
+    margin: 15px auto; 
+    margin-top: 0;
+    text-align: center;
+    line-height: 1.6;
+    letter-spacing: -0.1px;
+}
+
+.modal_contnet h1 {
+    cursor: pointer;
+}

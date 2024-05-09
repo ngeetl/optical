@@ -3,14 +3,11 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  margin: 2% 10%;
-  background-color: #f3f3f3;
+  margin: 4% 10%;
+  color: rgb(57, 57, 59);
+  background-color: whitesmoke;
 }
 
-h1 {
-  text-align: center;
-  margin-bottom: 40px;
-}
 .wrap {
   display: flex;
   flex-direction: column;
@@ -18,14 +15,17 @@ h1 {
 
 .polarization-chart {
   position: relative;
-  width: 520px;
-  height: 520px;
+  width: 630px;
+  height: 630px;
+  background-color: white;
+  padding: 24px 40px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 }
 
 .center-circle {
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 110px;
+  height: 110px;
   background-color: rgb(255, 255, 255);
   border-radius: 50%;
   top: 50%;
@@ -36,53 +36,31 @@ h1 {
   align-items: center;
   font-size: 24px;
   font-weight: bold;
-  color: rgb(0, 0, 0);
-}
-
-.lines {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+  color: rgb(51, 166, 255);
 }
 
 .line {
-  width: 45%;
+  width: 37%;
   height: 1px;
-  background-color: black;
+  background-color: rgb(57, 57, 59);
   position: absolute;
   top: 50%;
   left: 50%;
   transform-origin: left;
   cursor: pointer;
   transition: all .4s;
-  opacity: 0;
 }
 
 .line-bold {
-  width: 45%;
-  background-color: black;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform-origin: left;
-  cursor: pointer;
-  transition: all .4s;
-  height: 4px;
+  height: 2.5px;
 }
 
 .line:hover {
   background-color: rgb(51, 166, 255);
   color: rgb(51, 166, 255);
 }
-.line-bold:hover {
-  background-color: rgb(51, 166, 255);
-  color: rgb(51, 166, 255);
-}
 
 .line span {
-  /* padding: auto 60px; */
   text-align: center;
   width: 100px;
   position: absolute;
@@ -91,21 +69,18 @@ h1 {
 }
 
 .line-bold span {
-  text-align: center;
-  width: 100px;
-  position: absolute;
   top: -10px; /* 라벨을 선 위로 조정 */
   right: -76px; 
   font-size: large;
   font-weight: bold;
 }
 
+
 @media screen and (max-width: 600px) {
   .polarization-chart {
     width: 290px;
     height: 290px;
   }
-  
   .center-circle {
       position: absolute;
       width: 70px;
@@ -117,17 +92,13 @@ h1 {
       top: -5px; /* 라벨을 선 위로 조정 */
       right: -60px; 
   }
-  .line-bold span {
-    top: -11px; /* 라벨을 선 위로 조정 */
-    right: -88px; 
-}
 }
 
 /* button */
 .btn{
-  padding: 13px 20px;
+  padding: 14px 20px;
   border: none;
-  background-image: linear-gradient(45deg, #6a11cb, #2575fc);
+  background: #2575fc;
   color: white;
   font-size: 16px;
   font-weight: 500;
@@ -138,7 +109,9 @@ h1 {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   transition: all 0.3s ease;
   height: fit-content;
-  margin-top: 70px;
+  margin-top: 40px;
+  z-index: 88;
+
 }
 
 .btn:hover {
